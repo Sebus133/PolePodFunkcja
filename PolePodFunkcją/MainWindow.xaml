@@ -1,0 +1,34 @@
+﻿<Window x:Class="PolePodFunkcją.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PolePodFunkcją"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock>wpisz przedział od a->b twojej funkcji i liczbe próbek</TextBlock>
+            <StackPanel Orientation="Horizontal">
+            <Label>a:</Label> <TextBox Width="100" x:Name="pierwszaZmienna"></TextBox>
+             <Label>b:</Label><TextBox Width="100" x:Name="drugaZmienna"></TextBox>
+                <Label>n:</Label><TextBox Width="100" x:Name="liczbaTrapezów"></TextBox>
+            </StackPanel>
+
+            <TextBlock>wybierz jaką metodą chcesz to obliczyć</TextBlock>
+            <ComboBox x:Name="funkcje"></ComboBox>
+            <Button Click="Oblicz" >oblicz</Button>
+        </StackPanel>
+    </Grid>
+</Window>
